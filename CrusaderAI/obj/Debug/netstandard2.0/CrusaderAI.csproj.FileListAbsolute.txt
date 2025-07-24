@@ -1,0 +1,17 @@
+C:\Users\Mat\RiderProjects\CrusaderAI\CrusaderAI\bin\Debug\netstandard2.0\CrusaderAI.deps.json
+C:\Users\Mat\RiderProjects\CrusaderAI\CrusaderAI\bin\Debug\netstandard2.0\CrusaderAI.dll
+C:\Users\Mat\RiderProjects\CrusaderAI\CrusaderAI\bin\Debug\netstandard2.0\CrusaderAI.pdb
+C:\Users\Mat\RiderProjects\CrusaderAI\CrusaderAI\bin\Debug\netstandard2.0\0Harmony.dll
+C:\Users\Mat\RiderProjects\CrusaderAI\CrusaderAI\bin\Debug\netstandard2.0\Assembly-CSharp.dll
+C:\Users\Mat\RiderProjects\CrusaderAI\CrusaderAI\bin\Debug\netstandard2.0\BepInEx.dll
+C:\Users\Mat\RiderProjects\CrusaderAI\CrusaderAI\bin\Debug\netstandard2.0\UnityEngine.CoreModule.dll
+C:\Users\Mat\RiderProjects\CrusaderAI\CrusaderAI\bin\Debug\netstandard2.0\UnityEngine.dll
+C:\Users\Mat\RiderProjects\CrusaderAI\CrusaderAI\obj\Debug\netstandard2.0\CrusaderAI.csproj.AssemblyReference.cache
+C:\Users\Mat\RiderProjects\CrusaderAI\CrusaderAI\obj\Debug\netstandard2.0\CrusaderAI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mat\RiderProjects\CrusaderAI\CrusaderAI\obj\Debug\netstandard2.0\CrusaderAI.AssemblyInfoInputs.cache
+C:\Users\Mat\RiderProjects\CrusaderAI\CrusaderAI\obj\Debug\netstandard2.0\CrusaderAI.AssemblyInfo.cs
+C:\Users\Mat\RiderProjects\CrusaderAI\CrusaderAI\obj\Debug\netstandard2.0\CrusaderAI.csproj.CoreCompileInputs.cache
+C:\Users\Mat\RiderProjects\CrusaderAI\CrusaderAI\obj\Debug\netstandard2.0\CrusaderAI.csproj.Up2Date
+C:\Users\Mat\RiderProjects\CrusaderAI\CrusaderAI\obj\Debug\netstandard2.0\CrusaderAI.dll
+C:\Users\Mat\RiderProjects\CrusaderAI\CrusaderAI\obj\Debug\netstandard2.0\CrusaderAI.pdb
+C:\Users\Mat\RiderProjects\CrusaderAI\CrusaderAI\bin\Debug\netstandard2.0\UnityEngine.ImageConversionModule.dll
