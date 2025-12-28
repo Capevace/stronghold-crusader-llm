@@ -131,8 +131,12 @@ namespace CrusaderAI
                     case 0: // This is a ground tile update
                         short tileFile = sourceMap[recordIndex + 3];
                         short tileImage = sourceMap[recordIndex + 4];
+
+                        var tile = GameStateCache.Instance.State.Map.GetTile(x, y);
+                        tile.FileIndex = tileFile;
+                        tile.ImageIndex = tileImage;
                         
-                        // var tile = GameStateCache.Instance.State.Mas, y, tile);
+                        GameStateCache.Instance.State.Map.SetTile(x, y, tile);
                         
                         // Plugin.Log.LogInfo($"TILE: Coords=({x}, {y}), SpriteFile={tileFile}, SpriteImage={tileImage}");
                         break;

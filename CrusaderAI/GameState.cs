@@ -5,6 +5,7 @@ using BepInEx;
 using CrusaderDE;
 using UnityEngine;
 using System.IO;
+using System.Text;
 using SimpleJSON;
 
 namespace CrusaderAI
@@ -43,29 +44,9 @@ namespace CrusaderAI
         
         public static Dictionary<string, object> ToDict(this Map map)
         {
-            if (map.Tiles == null)
-            {
-                return new Dictionary<string, object>
-                {
-                    { "Size", map.Size },
-                    { "Tiles", null }
-                };
-            }
-            
-            var tiles = new List<List<Dictionary<string, object>>>();
-            for (int i = 0; i < map.Tiles.GetLength(0); i++)
-            {
-                var row = new List<Dictionary<string, object>>();
-                for (int j = 0; j < map.Tiles.GetLength(1); j++)
-                {
-                    row.Add(map.Tiles[i, j].ToDict());
-                }
-                tiles.Add(row);
-            }
             return new Dictionary<string, object>
             {
                 { "Size", map.Size },
-                { "Tiles", tiles },
             };
         }
 
@@ -98,6 +79,9 @@ namespace CrusaderAI
 
         public GameState State;
         
+        private float _lastWriteTime = 0f;
+        private const float WriteInterval = 2.0f;
+        
         private GameStateCache()
         {
             this.State = GameState.Initial();
@@ -105,6 +89,13 @@ namespace CrusaderAI
         
         public void WriteStateToFile()
         {
+            if (Time.time < _lastWriteTime + WriteInterval)
+            {
+                return;
+            }
+            
+            _lastWriteTime = Time.time;
+            
             try
             {
                 var json = JSONEncoder.Encode(this.State.ToDict());
@@ -113,9 +104,66 @@ namespace CrusaderAI
                 File.WriteAllText(filePath, json);
 
                 Plugin.Log.LogInfo("Successfully wrote GameState.json");
+                
+                WriteTilesToCsv(this.State.Map);
             } catch (Exception ex)
             {
                 Plugin.Log.LogError("Failed to write game state to file.");
+                Plugin.Log.LogError(ex.ToString());
+            }
+        }
+        
+        private void WriteTilesToCsv(Map map)
+        {
+            if (map.Tiles == null) return;
+        
+            try
+            {
+                var sb = new StringBuilder();
+                sb.AppendLine("PositionX,PositionY,WorldPositionX,WorldPositionY,Height,BuildingHeight,FileIndex,ImageIndex");
+        
+                for (int x = 0; x < map.Tiles.GetLength(0); x++)
+                {
+                    for (int y = 0; y < map.Tiles.GetLength(1); y++)
+                    {
+                        var tile = map.Tiles[x, y];
+
+                        if (
+                            tile.Position.x == 0
+                            && tile.Position.y == 0
+                            && tile.WorldPosition.x == 0
+                            && tile.WorldPosition.y == 0
+                            && tile.Height == 0
+                            && tile.BuildingHeight == 0
+                            && tile.FileIndex == 0
+                            && tile.ImageIndex == 0
+                        )
+                        {
+                            continue;
+                        }
+                        
+                        var line = string.Format(System.Globalization.CultureInfo.InvariantCulture, 
+                            "{0},{1},{2},{3},{4},{5},{6},{7}",
+                            tile.Position.x,
+                            tile.Position.y,
+                            tile.WorldPosition.x,
+                            tile.WorldPosition.y,
+                            tile.Height,
+                            tile.BuildingHeight,
+                            tile.FileIndex,
+                            tile.ImageIndex);
+                        
+                        sb.AppendLine(line);
+                    }
+                }
+        
+                string csvFilePath = Path.Combine(Paths.GameRootPath, "Tiles.csv");
+                File.WriteAllText(csvFilePath, sb.ToString());
+                Plugin.Log.LogInfo("Successfully wrote Tiles.csv");
+            }
+            catch (Exception ex)
+            {
+                Plugin.Log.LogError("Failed to write tiles to CSV.");
                 Plugin.Log.LogError(ex.ToString());
             }
         }
