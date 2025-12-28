@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <RunPostBuildEvent>Always</RunPostBuildEvent>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Reference Include="0Harmony">
+        <HintPath>lib\0Harmony.dll</HintPath>
+      </Reference>
+      <Reference Include="Assembly-CSharp">
+        <HintPath>lib\Assembly-CSharp.dll</HintPath>
+      </Reference>
+      <Reference Include="BepInEx">
+        <HintPath>lib\BepInEx.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine">
+        <HintPath>lib\UnityEngine.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.CoreModule">
+        <HintPath>lib\UnityEngine.CoreModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.ImageConversionModule">
+        <HintPath>lib\UnityEngine.ImageConversionModule.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+    <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+      <Exec Command="xcopy &quot;$(TargetDir.TrimEnd('\\'))&quot; &quot;C:\Program Files (x86)\Steam\steamapps\common\Stronghold Crusader Definitive Edition\BepInEx\plugins\CrusaderAI\&quot; /Y /I /E" />
+    </Target>
+
+</Project>
