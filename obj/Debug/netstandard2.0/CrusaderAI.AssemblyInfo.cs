@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CrusaderAI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bedcd88d5bbc5251b44f6ed608cc0c3ed061cfd6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+30278d3e7709100ad361edb6773cb9f101bef8e6")]
 [assembly: System.Reflection.AssemblyProductAttribute("CrusaderAI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CrusaderAI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

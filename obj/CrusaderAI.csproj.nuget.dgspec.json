@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mat\\RiderProjects\\CrusaderAI\\CrusaderAI\\CrusaderAI.csproj": {}
+    "c:\\Users\\Mat\\RiderProjects\\CrusaderAI\\CrusaderAI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mat\\RiderProjects\\CrusaderAI\\CrusaderAI\\CrusaderAI.csproj": {
+    "c:\\Users\\Mat\\RiderProjects\\CrusaderAI\\CrusaderAI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mat\\RiderProjects\\CrusaderAI\\CrusaderAI\\CrusaderAI.csproj",
+        "projectUniqueName": "c:\\Users\\Mat\\RiderProjects\\CrusaderAI\\CrusaderAI.csproj",
         "projectName": "CrusaderAI",
-        "projectPath": "C:\\Users\\Mat\\RiderProjects\\CrusaderAI\\CrusaderAI\\CrusaderAI.csproj",
+        "projectPath": "c:\\Users\\Mat\\RiderProjects\\CrusaderAI\\CrusaderAI.csproj",
         "packagesPath": "C:\\Users\\Mat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mat\\RiderProjects\\CrusaderAI\\CrusaderAI\\obj\\",
+        "outputPath": "c:\\Users\\Mat\\RiderProjects\\CrusaderAI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

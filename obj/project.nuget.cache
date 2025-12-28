@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Yr6bExV1Omw=",
+  "dgSpecHash": "I3wgi5RTlg4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mat\\RiderProjects\\CrusaderAI\\CrusaderAI\\CrusaderAI.csproj",
+  "projectFilePath": "c:\\Users\\Mat\\RiderProjects\\CrusaderAI\\CrusaderAI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mat\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Mat\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
